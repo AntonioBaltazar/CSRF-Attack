@@ -1,0 +1,38 @@
+Author : Antonio BALTAZAR
+Date : 08/12/2023
+
+CSRF Vulnerability Demonstration - Website
+This project has been created to demonstrate CSRF (Cross-Site Request Forgery) vulnerability. The website is divided into two parts: Unprotected and Protected.
+
+Unprotected
+In the "Unprotected" section, we highlight the CSRF vulnerability by simulating an attack. When the user clicks on a pop-up at the bottom of the screen, they are redirected to a malicious page (evil.html) that executes a form to change the password. A button is included to inform the user that they have been redirected to a malicious page.
+
+Demo:
+
+- Access the "Unprotected" page of the site.
+- Click on the pop-up at the bottom of the screen to be redirected to "evil.html."
+- Observe the password change without user confirmation.
+
+
+Protected
+In the "Protected" section, we use the same page as in the "Unprotected" version but this time there is an anti-CSRF token assigned to the user's session. The malicious pop-up can no longer successfully execute a password change request without the appropriate CSRF token.
+
+Demo:
+
+- Access the "Protected" page of the site.
+- Click on the pop-up at the bottom of the screen to be redirected to "evil.html."
+- Note that the password change form fails due to the absence of the CSRF token.
+- How to Run Locally
+
+Clone this repository to your local machine.
+bash
+Copy code
+git clone https://github.com/your-username/your-project.git
+Place the files in your local server (e.g., Wamp, XAMPP, MAMP).
+
+Access the site through your preferred browser.
+
+Explore the "Unprotected" and "Protected" sections to see the difference in CSRF attack handling.
+
+Note
+This project is intended for educational purposes only. Do not use it for malicious purposes, and make sure to comply with applicable laws and regulations.

